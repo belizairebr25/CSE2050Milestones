@@ -77,30 +77,54 @@ There will be a class "University":
 Required test cases include:
 
   Course Class: 
+  
     • Test object creation for course class 
+    
     • Test adding student objects to the course roster 
+    
     • Test that code prevents duplicate object entries in student roster 
+    
     • Test student count 
+    
   Student Class: 
+  
     • Test object creation for student class 
+    
     • Test enrolling to course 
+    
     • Test GPA calculation 
+    
     • Test getting student courses 
+    
   University Class: 
+  
     • Test object creation for university class 
+    
     • Test adding a course to university object 
+    
     • Test duplicate course objects 
+    
     • Test adding a student 
+    
     • Test adding duplicate student 
+    
     • Test getting student info 
+    
     • Test getting non-existent student info 
+    
     • Test getting course 
+    
     • Test getting non-existent course
+    
 
 Submission must include:
+
   Python source file(s)
+  
   Python test file
+  
   Readme file(NOT THIS ONE!) on how to run the program and the tests
+  
 
   
     
