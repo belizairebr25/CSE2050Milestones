@@ -2,11 +2,7 @@ import unittest
 from university import *
 
 class TestUniversity(unittest.TestCase):
-
-   """Tests the university class for object creation, adding courses,
-       duplicate course management, adding a student, duplicate student
-       management, get student info, get nonexistent student info,
-       get course, get nonexistent course"""
+   """Test suite for people management program"""
     
    def setUp(self):
       #define object data
@@ -26,6 +22,14 @@ class TestUniversity(unittest.TestCase):
       #unpack test_student tuple to use as parameters
       self.UCONN.add_student(*self.test_student)
 
+
+
+   ###~~~University Class tests~~~###
+   """Tests the university class for object creation, adding courses,
+       duplicate course management, adding a student, duplicate student
+       management, get student info, get nonexistent student info,
+       get course, get nonexistent course"""
+   
    def test_object_creation(self):   
       """test if university object created. The university constructor has no parameters"""
       #checks to see if the object uconn returns it's name. This should be handled with something like an __str__ method
@@ -43,7 +47,7 @@ class TestUniversity(unittest.TestCase):
          self.uconn.add_course(*self.test_course)
 
    def test_student_creation(self):
-      """test to se if students can be added to university object. Method add_student has parameters: self, student_id, name"""
+      """test to see if students can be added to university object. Method add_student has parameters: self, student_id, name"""
       #assert student object created by name
       self.assertIsInstance(self.test_student[1], Student)
 
@@ -75,7 +79,20 @@ class TestUniversity(unittest.TestCase):
       with self.assertRaises(ValueError):
          self.UCONN.get_course(self.fake_course[0])
 
-#TO DO:
-"""test/verify university class tests"""
-"""implement course class tests"""
-"""implement student class tests"""
+
+
+
+   ###~~~Student Class tests~~~###
+   """Test for object creation in student class,
+   Course Enrollment, GPA calculation, getting student courses"""
+   def test_student_class(self):
+      pass
+
+
+
+   ###~~~Course Class tests~~~###
+   """Test for object creation in course class,
+   adding student objects to course roster,
+   prevent duplicates in student roster, student count"""
+   
+
