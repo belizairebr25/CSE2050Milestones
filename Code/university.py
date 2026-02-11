@@ -77,7 +77,6 @@ GRADE_POINTS = {
     'F' : 0.0,
 }
 
-
 course_map:dict[str, Course] = {}
 for c in get_course_data():
     code = c.get('course_code')
@@ -108,8 +107,6 @@ def parse_student_course(raw:str, c_map:dict[str, Course], student: Student):
         obj.add_student(student)
         student.enroll(obj, course_grade)
     return None
-
-
 for s in get_student_data():
     student_id = s.get('student_id')
     student_name = s.get('name')
@@ -119,3 +116,8 @@ for s in get_student_data():
 
     ALL_STUDENTS.append(student)
 
+
+student = ALL_STUDENTS[0]
+
+print(student.get_course_info())
+student.calculate_gpa()
